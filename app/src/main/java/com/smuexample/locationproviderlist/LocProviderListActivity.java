@@ -31,10 +31,14 @@ public class LocProviderListActivity extends AppCompatActivity {
                 locProviders = locMgr.getAllProviders();
 
                 String s = "";
-                for(int i = 0; i < locProviders.size(); i++){
-                    s += "Loc. Provider. " + locProviders.get(i) + "\n"
-                            + "Status: " + locMgr.isProviderEnabled(locProviders.get(i) + "\n");
+                for(String string : locProviders){
+                    s += "Loc. Provider. " + locProviders + "\n"
+                           + "Status: " + locMgr.isProviderEnabled(locProviders + "\n");
                 }
+//                for(int i = 0; i < locProviders.size(); i++){
+//                    s += "Loc. Provider. " + locProviders.get(i) + "\n"
+//                            + "Status: " + locMgr.isProviderEnabled(locProviders.get(i) + "\n");
+//                }
                 mtextView.setText(s);
 
             }
